@@ -1,0 +1,39 @@
+{% extends 'layout.html' %} 
+{% block title %} {{title}} {% endblock %} 
+{% block head %}
+<link rel="stylesheet" href="/css/index.css">
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/systemjs/0.21.0/system-production.js"></script>
+{% endblock %} 
+{% block content %}
+<div class="container" id="praise-box">
+    <div class="part1"></div>
+    <div class="part2"></div>
+    <div class="part3"></div>
+    <div class="finger one"></div>
+    <div class="finger two"></div>
+    <div class="finger three"></div>
+    <div class="finger four"></div>						
+</div>
+<script>
+		
+    SystemJS.config({
+        baseURL: '/js'
+    });
+
+    SystemJS.import('Thumb.js').then(function(m) {
+        $.extend({
+            praise: m.default
+        });
+        callBack();
+    });
+
+    function callBack() {
+        var f = new $.praise({
+            praiseNode: document.getElementById('praise-box')
+        });
+        f.handlePraise();
+    }
+    
+</script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{
+  "name": "koaweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "wy",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "co": "^4.6.0",
+    "koa": "^2.5.0",
+    "koa-simple-router": "^0.2.0",
+    "koa-static": "^4.0.2",
+    "koa-swig": "^2.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  }
+}
