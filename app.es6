@@ -26,3 +26,5 @@ app.use(serve(CONFIG.get('staticDir')));
 
 
 app.listen(CONFIG.get('port'));
+
+export default app;

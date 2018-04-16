@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "unitTest": "karma start",
+    "serverTest": "node mochaRunner.js"
+  },
   "author": "wy",
   "license": "ISC",
   "dependencies": {
@@ -28,8 +31,11 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
+    "mocha": "^5.1.0",
+    "mochawesome": "^3.0.2",
     "phantomjs": "^2.1.7",
     "request": "^2.85.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "supertest": "^3.0.0"
   }
 }

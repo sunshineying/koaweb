@@ -1,16 +1,16 @@
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
-        define(['exports', './PraiseButton.js', './axios.js'], factory);
+        define(['exports', './PraiseButton.js'], factory);
     } else if (typeof exports !== "undefined") {
-        factory(exports, require('./PraiseButton.js'), require('./axios.js'));
+        factory(exports, require('./PraiseButton.js'));
     } else {
         var mod = {
             exports: {}
         };
-        factory(mod.exports, global.PraiseButton, global.axios);
+        factory(mod.exports, global.PraiseButton);
         global.Thumb = mod.exports;
     }
-})(this, function (exports, _PraiseButton2, _axios) {
+})(this, function (exports, _PraiseButton2) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -18,8 +18,6 @@
     });
 
     var _PraiseButton3 = _interopRequireDefault(_PraiseButton2);
-
-    var _axios2 = _interopRequireDefault(_axios);
 
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
@@ -117,7 +115,7 @@
                     }
                     f = setTimeout(function () {
                         _this2.addCount();
-                        _axios2.default.get('/index/update').then(function (response) {
+                        axios.get('/index/update').then(function (response) {
                             console.log(response);
                         }).catch(function (error) {
                             console.log(error);

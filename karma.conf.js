@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './public/js/PraiseButton.js',
+      './public/js/PraiseButton.es6',
       './test/PraiseButton.spec.js'
     ],
 
@@ -28,7 +28,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './public/js/PraiseButton.js':['babel'],
+      './public/js/PraiseButton.es6':['babel'],
       './test/PraiseButton.spec.js':['babel']
     },
 

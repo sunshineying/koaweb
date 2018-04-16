@@ -1,5 +1,4 @@
 import PraiseButton from "./PraiseButton.js";
-import axios from './axios.js';
 
 /*
  * Thumb
